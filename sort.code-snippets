@@ -1,0 +1,9 @@
+{
+    "sort2": {
+        "prefix": "sort2",
+        "body": [
+          "sort(all(a), [](auto i, auto j) -> bool {return i[0] < j[0];});"
+        ],
+        "description": ""
+      }
+}
