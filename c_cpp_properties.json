@@ -4,15 +4,17 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/Cellar/gcc/10.2.0_4/include/**",
-                "/Users/narushimashigeki/git/ac-library"
+                "/usr/local/include/;**",
+                "/Users/shigeki/Documents/C++/ac-library/"
             ],
             "defines": ["LOCAL"],
-            "macFrameworkPath": [],
-            "compilerPath": "/opt/homebrew/bin/gcc-10",
-            "cStandard": "gnu17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "macos-gcc-arm64"
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/local/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4
