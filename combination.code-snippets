@@ -42,7 +42,7 @@
       "simple_combination": {
         "prefix": "simple_combination",
         "body": [
-          "template< typename T>",
+          "template< typename T >",
           "T cmb(T N, T K) {",
           "  if(K < 0 || N < K) return 0;",
           "  T ret = 1;",
@@ -70,6 +70,47 @@
           "  }",
           "  return mat;",
           "}"
+        ],
+        "description": ""
+      },
+
+      "LucasCombination": {
+        "prefix": "LucasCombination",
+        "body": [
+          "/* nCk % MOD (MODは10000以下程度の素数) を計算する構造体",
+          "    構築: O(MOD^2)",
+          "    クエリ: O(log N) ",
+          "*/",
+          "template < typename T = long long > ",
+          "struct LucasCombination {",
+          "    vector<vector<T>> com;  // 前計算の結果を保存",
+          "    long long MOD;                    // MOD は素数である必要がある",
+          "    LucasCombination(T _MOD) : MOD(_MOD) {",
+          "        com.assign(MOD, vector<T>(MOD));",
+          "        com[0][0] = 1;",
+          "        for (int i = 1; i < MOD; i++) {",
+          "            com[i][0] = 1;",
+          "            for (int j = i; j > 0; j--) {",
+          "                com[i][j] = (com[i - 1][j - 1] + com[i - 1][j]) % MOD;",
+          "            }",
+          "        }",
+          "    }",
+          "",
+          "    T C(T n, T k) {",
+          "        if(n < k) return 0;",
+          "        T ret = 1;",
+          "        while (n > 0) {  // 下から一桁ずつ計算する",
+          "            int ni = n % MOD;",
+          "            int ki = k % MOD;",
+          "            ret *= com[ni][ki];",
+          "            ret %= MOD;",
+          "            n /= MOD;",
+          "            k /= MOD;",
+          "        }",
+          "        return ret;",
+          "    }",
+          "};",
+          ""
         ],
         "description": ""
       }
