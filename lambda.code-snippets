@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "prefix": "lambda",
+    "body": [
+      "function<void(int, int)> dfs = [&](int v, int p){",
+      "  $1",
+      "};"
+    ],
+    "description": ""
+  }
+}
