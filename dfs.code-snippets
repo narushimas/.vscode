@@ -1,0 +1,15 @@
+{
+  "dfs_lambda": {
+    "prefix": "dfs_lambda",
+    "body": [
+      "  auto dfs = [&](auto& dfs, int v, int p) -> void{",
+      "    for(auto e : g.g[v]){",
+      "      if(e.to == p) continue;",
+      "      dfs(dfs, e.to, v);",
+      "    }",
+      "  };",
+      "  dfs(dfs, 0, -1);"
+    ],
+    "description": ""
+  }
+}
