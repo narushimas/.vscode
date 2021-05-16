@@ -52,13 +52,7 @@
         "};",
         "",
         "template< typename T = int >",
-        "using Edges = vector< Edge< T > >;",
-        "",
-        "template< typename T >",
-        "struct ShortestPath {",
-        "  vector< T > dist;",
-        "  vector< int > from, id;",
-        "};"
+        "using Edges = vector< Edge< T > >;"
         ],
         "description": ""
     },
