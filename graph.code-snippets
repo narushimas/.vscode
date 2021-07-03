@@ -1,6 +1,6 @@
 {
-    "graph": {
-        "prefix": "graph",
+    "Graph": {
+        "prefix": "Graph",
         "body": [
         "template< typename T = int >",
         "struct Edge {",
